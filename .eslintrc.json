@@ -1,23 +1,22 @@
 {
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "es6": true
-    },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 2018
-    },
-    "rules": {
-        "indent": ["warn", "tab"],
-        "quotes": ["error", "single"],
-        "no-unused-vars": "warn",
-        "no-undef": "warn",
-        "semi": ["error", "always"],
-        "no-console": ["error", { "allow": ["warn", "error", "log"] }]
-    },
-    "plugins": ["import"]
+	"env": {
+		"browser": true,
+		"commonjs": true,
+		"amd": true,
+		"es6": true
+	},
+	"extends": "es2015",
+	"parserOptions": {
+		"ecmaVersion": 2015,
+		"sourceType": "module"
+	},
+	"rules": {
+		"indent": ["warn", "tab"],
+		"quotes": ["error", "single"],
+		"no-unused-vars": "warn",
+		"no-undef": "warn",
+		"semi": ["error", "always"],
+		"no-console": ["error", { "allow": ["warn", "error", "log"] }]
+	},
+	"plugins": ["import"]
 }
