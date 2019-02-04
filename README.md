@@ -47,3 +47,21 @@ Install project dependencies
 ```bash
 $ npm i
 ```
+
+Run development
+
+```bash
+$ npm run build:dev
+```
+
+Run dist
+
+```bash
+$ npm run build:dist
+```
+
+Run Tests
+
+```bash
+$ npm test
+```
