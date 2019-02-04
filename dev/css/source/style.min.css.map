@@ -1,1 +1,0 @@
-{"version":3,"sources":["scss/style.scss"],"names":[],"mappings":"AAAA,IAAI,CAAC;EACJ,KAAK,EAAE,GAAG,GACV","file":"../style.min.css","sourcesContent":["body {\n\tcolor: red;\n}\n"]}
