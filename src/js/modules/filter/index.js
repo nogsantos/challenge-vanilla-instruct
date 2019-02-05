@@ -7,11 +7,18 @@ export class FilterController {
 	 *
 	 * @memberof FilterController
 	 */
-	constructor() {
-		const $ = document.querySelector.bind(document);
+    constructor() {
+        const $ = document.querySelector.bind(document);
+        this.filter = $('#filter');
+        console.log('hello from filter', this.filter);
+    }
 
-		this.filter = $('#filter');
-
-		console.log('hello from filter', this.filter);
-	}
+    /**
+     *
+     * @param {Event} event
+     */
+    do(event) {
+        event.preventDefault();
+        console.log('Value', this.filter.value);
+    }
 }
