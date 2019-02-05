@@ -5,20 +5,17 @@ module.exports = {
 		app: './src/js/index.js'
 	},
 	output: {
-		path: path.resolve(__dirname, 'dev'),
-		filename: 'bundle.js'
+		filename: 'bundle.js',
+		path: path.resolve(__dirname, 'dev')
 	},
 	module: {
 		rules: [
 			{
-				test: /\.(js)$/,
+				test: /\.js$/,
 				exclude: /(node_modules)/,
 				use: [
 					{
-						loader: 'babel-loader',
-						options: {
-							presets: ['es2015']
-						}
+						loader: 'babel-loader'
 					}
 				]
 			}
