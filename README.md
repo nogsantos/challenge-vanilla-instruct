@@ -1,6 +1,6 @@
-# Instruct
+# Instruct - Challenge
 
-Fabricio Nogueira (nogsantos@gmail.com)
+Fabricio Nogueira - [fabricionogueira.me](https://fabricionogueira.me)
 
 Requirements
 
@@ -21,7 +21,7 @@ Requirements
     </tbody>
 </table>
 
-Dependencies
+Build dependencies
 
 <table>
     <tbody>
@@ -31,11 +31,15 @@ Dependencies
         </tr>
         <tr>
             <td>Gulp</td>
-            <td>3.9.1</td>
+            <td>3.x</td>
         </tr>
         <tr>
-            <td>NPM</td>
-            <td>>= 5.6</td>
+            <td>Webpack</td>
+            <td>4.x</td>
+        </tr>
+        <tr>
+            <td>Babel</td>
+            <td>6.x</td>
         </tr>
     </tbody>
 </table>
@@ -48,20 +52,14 @@ Install project dependencies
 $ npm i
 ```
 
-Run development
+Run development environment. The project will be available on `http://localhost:8080`, when a file changes, the dev build will recompiles again. Just refresh the page.
 
 ```bash
 $ npm run build:dev
 ```
 
-Run dist
+Run dist. The distribute files will be generated minified on `dist` dir.
 
 ```bash
 $ npm run build:dist
-```
-
-Run Tests
-
-```bash
-$ npm test
 ```
