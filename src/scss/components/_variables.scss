@@ -2,9 +2,7 @@ $primary-color: color('instruct-base-dark', 'base') !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 $secondary-color: color('instruct-base-accent', 'base') !default;
-$success-color: color('green', 'base') !default;
 $error-color: color('red', 'base') !default;
-$link-color: color('light-blue', 'darken-1') !default;
 
 $button-border: none !default;
 $button-background-focus: lighten($secondary-color, 4%) !default;
@@ -36,8 +34,7 @@ $button-floating-radius: 50% !default;
 
 $card-padding: 24px !default;
 $card-bg-color: #fff !default;
-$card-link-color: color('teal', 'accent-2') !default;
-$card-link-color-light: lighten($card-link-color, 20%) !default;
+// $card-link-color-light: lighten($card-link-color, 20%) !default;
 
 $dropdown-bg-color: #fff !default;
 $dropdown-hover-bg-color: #eee !default;
@@ -49,7 +46,7 @@ $input-border-color: color('grey', 'base') !default;
 $input-border: 1px solid $input-border-color !default;
 $input-background: #fff !default;
 $input-error-color: $error-color !default;
-$input-success-color: $success-color !default;
+// $input-success-color: $success-color !default;
 $input-focus-color: $secondary-color !default;
 $input-font-size: 16px !default;
 $input-margin-bottom: 8px;
