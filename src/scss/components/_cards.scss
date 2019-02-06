@@ -23,8 +23,9 @@
 	}
 	.card-image {
         position: relative;
+		background-color: color('grey', 'lighten-3');
         @media only screen and (min-width: $large-screen) {
-            min-height: 321.328px;
+            min-height: 260px;
         }
         img {
 			display: block;
