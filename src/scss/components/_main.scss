@@ -15,6 +15,7 @@ header {
 	z-index: 9999;
 	display: flex;
 	align-items: center;
+	top: 0;
 }
 
 main {
@@ -23,12 +24,12 @@ main {
 }
 
 a {
-    color: #283C50;
-    text-decoration: none;
+	color: #283c50;
+	text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 .left-align,
@@ -142,20 +143,20 @@ a:hover {
 }
 
 main {
-    section{
-        &.container {
-            min-height: calc(100vh - 230px);
-        }
-    }
+	section {
+		&.container {
+			min-height: calc(100vh - 230px);
+		}
+	}
 }
 
 footer {
-    border-top: 1px solid color('grey', 'lighten-2');
-    padding-top: 15px;
-    height: 35px;
+	border-top: 1px solid color('grey', 'lighten-2');
+	padding-top: 15px;
+	height: 35px;
 }
 
 img.responsive-img {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
 }
