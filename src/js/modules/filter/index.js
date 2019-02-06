@@ -10,7 +10,6 @@ export class FilterController {
 		this.filter = $('#filter');
 		this.filter.focus();
 		this.usersCard = $('.user-card');
-		this.notFoundMessage = $('#not-found');
 	}
 
 	/**
