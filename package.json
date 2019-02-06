@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "test": "./node_modules/.bin/jest --verbose --no-cache",
-    "build:dist": "./node_modules/.bin/gulp build --env=dist --port=8080 --host=0.0.0.0 ",
+    "build:dist": "./node_modules/.bin/gulp build --env=dist",
     "build:dev": "./node_modules/.bin/gulp build --env=dev --port=8080 --host=0.0.0.0 run "
   },
   "keywords": [

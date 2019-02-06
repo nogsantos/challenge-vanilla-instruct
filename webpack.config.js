@@ -1,4 +1,5 @@
 const path = require('path');
+const argv = require('yargs').argv;
 
 module.exports = {
 	entry: {
@@ -6,7 +7,7 @@ module.exports = {
 	},
 	output: {
 		filename: 'bundle.js',
-		path: path.resolve(__dirname, 'dev')
+		path: path.resolve(__dirname, argv.env)
 	},
 	module: {
 		rules: [
@@ -22,5 +23,5 @@ module.exports = {
 		]
 	},
 	devtool: 'source-map',
-	mode: 'development'
+	mode: argv.env && argv.env == 'dev' ? 'development' : 'production'
 };
