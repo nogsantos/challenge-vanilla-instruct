@@ -61,7 +61,7 @@ export class ListController {
 			`<card class="col s12 m4 xl4 user-card-detail">
                 <div class="card hoverable">
                     <div class="card-image">
-                        <img src="${this.userRandomImage()}" />
+                        <img class="responsive-img" src="${this.userRandomImage()}" />
                         <span class="card-title">
                             <div class="username-line flow-text">
                                 ${user.username}
