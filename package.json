@@ -42,7 +42,6 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "3.0.1",
     "gulp-uglifycss": "1.1.0",
-    "jest": "24.0.0",
     "load-gulp-tasks": "^0.1.0",
     "merge-stream": "1.0.1",
     "npm-run-all": "^4.1.5",
@@ -56,18 +55,5 @@
   },
   "engines": {
     "node": ">=6.*"
-  },
-  "jest": {
-    "verbose": true,
-    "testPathIgnorePatterns": [
-      "<rootDir>/dev/",
-      "<rootDir>/dist/",
-      "<rootDir>/node_modules/",
-      "<rootDir>/package.json"
-    ],
-    "modulePaths": [
-      "<rootDir>"
-    ],
-    "testEnvironment": "node"
   }
 }

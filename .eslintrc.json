@@ -16,7 +16,10 @@
 		"no-unused-vars": "warn",
 		"no-undef": "warn",
 		"semi": ["error", "always"],
-		"no-console": ["error", { "allow": ["warn", "error", "log"] }]
+		"no-console": ["warn"]
+	},
+	"globals": {
+		"process": true
 	},
 	"plugins": ["import"]
 }
