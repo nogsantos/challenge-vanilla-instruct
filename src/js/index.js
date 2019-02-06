@@ -10,6 +10,6 @@ const filter = new FilterController();
 const list = new ListController();
 
 /**
- * Bind with dom components
+ * Bind filter component event
  */
 document.querySelector('#filter').addEventListener('keyup', filter.do.bind(filter));

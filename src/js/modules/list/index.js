@@ -58,22 +58,20 @@ export class ListController {
 	render(user) {
 		this.card.insertAdjacentHTML(
 			'beforeend',
-			`<div class="col s12 m4 xl4 ${this.getEmailDomain(user.email)}" ref="${this.getEmailDomain(user.email)}">
+			`<card class="col s12 m4 xl4">
                 <div class="card hoverable">
                     <div class="card-image">
                         <img src="${this.userRandomImage()}" />
                         <span class="card-title">
-                            <div class="username-line">
+                            <div class="username-line flow-text">
                                 ${user.username}
                             </div>
                         </span>
                     </div>
                     <div class="card-content">
-                        <div class="card-item name">
-                            ${user.name}
-                        </div>
+                        <div class="card-item name">${user.name}</div>
                         <div class="card-item email">
-                            <a href="mailto:${user.email}">${user.email}</a>
+                            <mail>${user.email}</mail>
                         </div>
                         <div class="card-item phone">${user.phone}</div>
                         <div class="card-item website">
@@ -84,22 +82,8 @@ export class ListController {
                         </div>
                     </div>
                 </div>
-            </div>`
+            </card>`
 		);
-	}
-
-	/**
-	 * Get email domain
-	 *
-	 * @param {String} email
-	 */
-	getEmailDomain(email) {
-		if (!email) {
-			return '';
-		}
-		let parse = email.split('@');
-		let result = parse[parse.length - 1].split('.');
-		return result[result.length - 1];
 	}
 
 	/**
