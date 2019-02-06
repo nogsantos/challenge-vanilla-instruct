@@ -9,17 +9,17 @@ $header-heigth: 8rem;
 header {
 	background: color('instruct-base-light', 'base');
 	background: linear-gradient(45deg, #1e73aa 0%, #23a5fa 100%);
-    min-height: $header-heigth;
-    position: fixed;
-    width: 100%;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
+	min-height: $header-heigth;
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+	display: flex;
+	align-items: center;
 }
 
 main {
-    position: relative;
-    margin-top: calc(#{$header-heigth} + 2rem);
+	position: relative;
+	margin-top: calc(#{$header-heigth} + 2rem);
 }
 
 .left-align,
@@ -89,33 +89,46 @@ main {
 
 /* 2dp elevation modified*/
 @function shadowDepthColor($alpha) {
-    @return rgba(0, 0, 0, $alpha);
+	@return rgba(0, 0, 0, $alpha);
 }
 
 .z-depth-1 {
-	box-shadow: 0 2px 2px 0 shadowDepthColor(0.14), 0 3px 1px -2px shadowDepthColor(0.12), 0 1px 5px 0 shadowDepthColor(0.02);
+	box-shadow: 0 2px 2px 0 shadowDepthColor(0.14), 0 3px 1px -2px shadowDepthColor(0.12),
+		0 1px 5px 0 shadowDepthColor(0.02);
 }
 .z-depth-1-half {
-	box-shadow: 0 3px 3px 0 shadowDepthColor(0.14), 0 1px 7px 0 shadowDepthColor(0.12), 0 3px 1px -1px shadowDepthColor(0.02);
+	box-shadow: 0 3px 3px 0 shadowDepthColor(0.14), 0 1px 7px 0 shadowDepthColor(0.12),
+		0 3px 1px -1px shadowDepthColor(0.02);
 }
 
 /* 6dp elevation modified*/
 .z-depth-2 {
-	box-shadow: 0 4px 5px 0 shadowDepthColor(0.14), 0 1px 10px 0 shadowDepthColor(0.12), 0 2px 4px -1px shadowDepthColor(0.3);
+	box-shadow: 0 4px 5px 0 shadowDepthColor(0.14), 0 1px 10px 0 shadowDepthColor(0.12),
+		0 2px 4px -1px shadowDepthColor(0.3);
 }
 
 /* 12dp elevation modified*/
 .z-depth-3 {
-	box-shadow: 0 8px 17px 2px shadowDepthColor(0.14), 0 3px 14px 2px shadowDepthColor(0.12), 0 5px 5px -3px shadowDepthColor(0.02);
+	box-shadow: 0 8px 17px 2px shadowDepthColor(0.14), 0 3px 14px 2px shadowDepthColor(0.12),
+		0 5px 5px -3px shadowDepthColor(0.02);
 }
 
 /* 16dp elevation */
 .z-depth-4 {
-	box-shadow: 0 16px 24px 2px shadowDepthColor(0.14), 0 6px 30px 5px shadowDepthColor(0.12), 0 8px 10px -7px shadowDepthColor(0.02);
+	box-shadow: 0 16px 24px 2px shadowDepthColor(0.14), 0 6px 30px 5px shadowDepthColor(0.12),
+		0 8px 10px -7px shadowDepthColor(0.02);
 }
 
 /* 24dp elevation */
 .z-depth-5 {
-	box-shadow: 0 24px 38px 3px shadowDepthColor(0.14), 0 9px 46px 8px shadowDepthColor(0.12), 0 11px 15px -7px shadowDepthColor(0.02);
+	box-shadow: 0 24px 38px 3px shadowDepthColor(0.14), 0 9px 46px 8px shadowDepthColor(0.12),
+		0 11px 15px -7px shadowDepthColor(0.02);
 }
 
+.hoverable {
+	transition: box-shadow 0.25s;
+
+	&:hover {
+		box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+}

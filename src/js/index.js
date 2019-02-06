@@ -12,6 +12,4 @@ const list = new ListController();
 /**
  * Bind with dom components
  */
-document
-    .querySelector('#btnFilter')
-    .addEventListener('click', filter.do.bind(filter));
+document.querySelector('#filter').addEventListener('keyup', filter.do.bind(filter));

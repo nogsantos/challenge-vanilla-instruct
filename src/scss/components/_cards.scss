@@ -1,19 +1,18 @@
-.card-panel {
-	transition: box-shadow 0.25s;
-	padding: $card-padding;
-	margin: $element-top-margin 0 $element-bottom-margin 0;
-	border-radius: 2px;
-	@extend .z-depth-1;
-	background-color: $card-bg-color;
-}
-
 .card {
 	position: relative;
 	margin: $element-top-margin 0 $element-bottom-margin 0;
 	background-color: $card-bg-color;
 	transition: box-shadow 0.25s;
+	min-height: 509.328px;
 	border-radius: 2px;
 	@extend .z-depth-1;
+
+	&:hover {
+		.card-title {
+			text-shadow: 1px 1px 1px #000;
+			@extend .z-depth-1;
+		}
+	}
 
 	.card-title {
 		font-size: 24px;
@@ -21,100 +20,15 @@
 		&.activator {
 			cursor: pointer;
 		}
-	}
-
-	// Card Sizes
-	&.small,
-	&.medium,
-	&.large {
-		position: relative;
-
-		.card-image {
-			max-height: 60%;
-			overflow: hidden;
-		}
-		.card-image + .card-content {
-			max-height: 40%;
-		}
-		.card-content {
-			max-height: 100%;
-			overflow: hidden;
-		}
-		.card-action {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			right: 0;
-		}
-	}
-
-	&.small {
-		height: 300px;
-	}
-
-	&.medium {
-		height: 400px;
-	}
-
-	&.large {
-		height: 500px;
-	}
-
-	// Horizontal Cards
-	&.horizontal {
-		&.small,
-		&.medium,
-		&.large {
-			.card-image {
-				height: 100%;
-				max-height: none;
-				overflow: visible;
-
-				img {
-					height: 100%;
-				}
-			}
-		}
-
-		display: flex;
-
-		.card-image {
-			max-width: 50%;
-			img {
-				border-radius: 2px 0 0 2px;
-				max-width: 100%;
-				width: auto;
-			}
-		}
-
-		.card-stacked {
-			display: flex;
-			flex-direction: column;
-			flex: 1;
-			position: relative;
-
-			.card-content {
-				flex-grow: 1;
-			}
-		}
-	}
-
-	// Sticky Action Section
-	&.sticky-action {
-		.card-action {
-			z-index: 2;
-		}
-
-		.card-reveal {
-			z-index: 1;
-			padding-bottom: 64px;
+		.username-line {
+			background-color: rgba(0, 0, 0, 0.3);
+			padding: 5px 0 10px 5px;
 		}
 	}
 
 	.card-image {
 		position: relative;
-
-		// Image background for content
+		min-height: 321.328px;
 		img {
 			display: block;
 			border-radius: 2px 2px 0 0;
@@ -131,14 +45,14 @@
 			position: absolute;
 			bottom: 0;
 			left: 0;
-			max-width: 100%;
-			padding: $card-padding;
+			width: 100%;
 		}
 	}
 
 	.card-content {
-		padding: $card-padding;
+		padding: 10px;
 		border-radius: 0 0 2px 2px;
+		min-height: 138px;
 
 		p {
 			margin: 0;
@@ -152,44 +66,23 @@
 				line-height: 32px;
 			}
 		}
-	}
 
-	.card-action {
-		&:last-child {
-			border-radius: 0 0 2px 2px;
-		}
-		background-color: inherit; // Use inherit to inherit color classes
-		border-top: 1px solid rgba(160, 160, 160, 0.2);
-		position: relative;
-		padding: 16px $card-padding;
-
-		a:not(.btn):not(.btn-large):not(.btn-floating) {
-			color: $card-link-color;
-			margin-right: $card-padding;
-			transition: color 0.3s ease;
-			text-transform: uppercase;
-
-			&:hover {
-				color: $card-link-color-light;
+		.card-item {
+			&.name {
+				font-size: 1.5rem;
 			}
-		}
-	}
-
-	.card-reveal {
-		padding: $card-padding;
-		position: absolute;
-		background-color: $card-bg-color;
-		width: 100%;
-		overflow-y: auto;
-		left: 0;
-		top: 100%;
-		height: 100%;
-		z-index: 3;
-		display: none;
-
-		.card-title {
-			cursor: pointer;
-			display: block;
+			&.email {
+				color: color('grey', 'lighten-1');
+			}
+			&.phone {
+				color: color('grey', 'lighten-1');
+			}
+			&.website {
+				color: color('grey', 'lighten-1');
+			}
+			&.address {
+				color: color('grey', 'lighten-1');
+			}
 		}
 	}
 }
