@@ -22,6 +22,15 @@ main {
 	margin-top: calc(#{$header-heigth} + 2rem);
 }
 
+a {
+    color: #283C50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .left-align,
 .pull-left {
 	left: 0;
@@ -127,8 +136,8 @@ main {
 
 .hoverable {
 	transition: box-shadow 0.25s;
-
 	&:hover {
-		box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		box-shadow: 0 8px 17px 0 shadowDepthColor(0.2), 0 6px 20px 0 shadowDepthColor(0.19);
 	}
 }
+

@@ -58,7 +58,7 @@ export class ListController {
 	render(user) {
 		this.card.insertAdjacentHTML(
 			'beforeend',
-			`<card class="col s12 m4 xl4">
+			`<card class="col s12 m4 xl4 user-card-detail">
                 <div class="card hoverable">
                     <div class="card-image">
                         <img src="${this.userRandomImage()}" />
