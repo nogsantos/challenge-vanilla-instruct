@@ -1,0 +1,85 @@
+.card {
+	position: relative;
+	margin: $element-top-margin 0 $element-bottom-margin 0;
+	background-color: $card-bg-color;
+    transition: box-shadow 0.25s;
+    @media only screen and (min-width: $large-screen) {
+        min-height: 509.328px;
+	}
+	border-radius: 2px;
+	@extend .z-depth-1;
+	&:hover {
+		.card-title {
+			text-shadow: 1px 1px 2px #000;
+		}
+	}
+	.card-title {
+		font-size: 24px;
+        font-weight: 300;
+        text-shadow: 1px 1px 1px #000;
+		&.activator {
+			cursor: pointer;
+		}
+	}
+	.card-image {
+        position: relative;
+		background-color: color('grey', 'lighten-3');
+        @media only screen and (min-width: $large-screen) {
+            min-height: 260px;
+        }
+        img {
+			display: block;
+			border-radius: 2px 2px 0 0;
+			position: relative;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+		}
+		.card-title {
+            color: $card-bg-color;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            max-width: 100%;
+            padding: $card-padding;
+		}
+	}
+	.card-content {
+		padding: 10px;
+        border-radius: 0 0 2px 2px;
+        @media only screen and (min-width: $large-screen) {
+            min-height: 138px;
+        }
+		p {
+			margin: 0;
+        }
+		.card-title {
+            display: block;
+            line-height: 32px;
+            margin-bottom: 8px;
+            padding: $card-padding;
+			i {
+				line-height: 32px;
+			}
+		}
+		.card-item {
+			&.name {
+				font-size: 1.5rem;
+			}
+			&.email {
+				color: color('grey', 'darken-2');
+			}
+			&.phone {
+				color: color('grey', 'darken-2');
+			}
+			&.website {
+				color: color('grey', 'darken-2');
+			}
+			&.address {
+				color: color('grey', 'darken-2');
+			}
+		}
+	}
+}

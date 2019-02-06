@@ -1,10 +1,13 @@
 const runSequence = require('run-sequence');
-const sourcemaps = require('gulp-sourcemaps');
 const merge = require('merge-stream');
-
+const plumber = require('gulp-plumber');
 const pump = require('pump');
 const uglifyjs = require('uglify-es');
 const composer = require('gulp-uglify/composer');
+const webpack = require('webpack');
+const webpackStream = require('webpack-stream');
+const webpackConfig = require('../../webpack.config');
+
 const minify = composer(uglifyjs, console);
 
 /**
@@ -14,13 +17,18 @@ const minify = composer(uglifyjs, console);
  * https://www.npmjs.com/package/uglify-es
  */
 module.exports = (gulp, options, plugins) => {
-	const appJs = ['src/js/index.js'];
+	const appJs = ['src/js/**/*.js'];
 
 	gulp.task('js:min', () => {
 		return merge(
 			gulp
 				.src(appJs)
 				.pipe(plugins.concat('app.min.js'))
+				.pipe(plumber()) // prevent to stop on error
+				.pipe(
+					webpackStream(webpackConfig),
+					webpack
+				)
 				.pipe(plugins.rev())
 				.pipe(gulp.dest('dist/js'))
 		);
@@ -37,9 +45,12 @@ module.exports = (gulp, options, plugins) => {
 		return merge(
 			gulp
 				.src(appJs)
-				.pipe(sourcemaps.init())
 				.pipe(plugins.concat('app.min.js'))
-				.pipe(sourcemaps.write('./source'))
+				.pipe(plumber()) // prevent to stop on error
+				.pipe(
+					webpackStream(webpackConfig),
+					webpack
+				)
 				.pipe(gulp.dest('dev/js'))
 		);
 	});
