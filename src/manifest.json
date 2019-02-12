@@ -3,13 +3,13 @@
   "name": " Fabricio Nogueira - Instruct challenge",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "https://res.cloudinary.com/nogsantos/image/upload/v1549390282/instruct/favicon.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#0080b6",
   "background_color": "#ffffff"
 }
