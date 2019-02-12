@@ -43,7 +43,7 @@ export class ListController {
 			users.forEach(user => {
 				setTimeout(() => {
 					this.render(user);
-				}, 0);
+				}, 100);
 			});
 		} else {
 			this.renderError();

@@ -24,7 +24,7 @@ export class FilterController {
 		for (let index = 0; index < children.length; index++) {
 			setTimeout(() => {
 				this.filterRender(children, termToFilter, index);
-			}, 0);
+			}, 100);
 		}
 	}
 
