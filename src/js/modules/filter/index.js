@@ -13,23 +13,36 @@ export class FilterController {
 	}
 
 	/**
+	 * Filter event action
 	 *
 	 * @param {Event} event
 	 */
-
 	do(event) {
 		event.preventDefault();
 		let termToFilter = this.filter.value.toLowerCase();
 		let children = this.usersCard.getElementsByTagName('card');
 		for (let index = 0; index < children.length; index++) {
-			let card = children[index].getElementsByTagName('mail')[0];
-			let email = card.textContent || card.innerText;
-			let domain = this.getEmailDomain(email);
-			if (domain.toLowerCase().indexOf(termToFilter.trim()) > -1) {
-				children[index].style.display = '';
-			} else {
-				children[index].style.display = 'none';
-			}
+			setTimeout(() => {
+				this.filterRender(children, termToFilter, index);
+			}, 0);
+		}
+	}
+
+	/**
+	 * Filter event render
+	 *
+	 * @param {*} children
+	 * @param {*} termToFilter
+	 * @param {*} index
+	 */
+	filterRender(children, termToFilter, index) {
+		let card = children[index].getElementsByTagName('mail')[0];
+		let email = card.textContent || card.innerText;
+		let domain = this.getEmailDomain(email);
+		if (domain.toLowerCase().indexOf(termToFilter.trim()) > -1) {
+			children[index].style.display = '';
+		} else {
+			children[index].style.display = 'none';
 		}
 	}
 
